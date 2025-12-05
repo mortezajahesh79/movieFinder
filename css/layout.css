@@ -1,0 +1,228 @@
+/* ===== NAVBAR / HEADER ===== */
+
+header {
+  background-color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 40px;
+  background: #000;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.logo img {
+  height: 32px;
+}
+
+/* Search area */
+.search-area {
+  flex: 1;
+  margin: 0 40px;
+}
+
+.search-form {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px 44px 10px 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  background-color: #1a1a1a;
+  height: 40px;
+  color: #fff;
+}
+
+.search-input::placeholder {
+  color: #777;
+}
+
+.search-button {
+  position: absolute;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.search-button img {
+  width: 18px;
+}
+
+/* Genres dropdown in header */
+.genre-dropdown {
+  position: relative;
+}
+
+.dropdown-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 0.95rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dropdown-btn img {
+  width: 14px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 120%;
+  right: 0;
+  background: #111;
+  padding: 6px 0;
+  border-radius: 8px;
+  min-width: 180px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+  z-index: 30;
+}
+
+.dropdown-content.active {
+  display: block;
+}
+
+/* ===== HERO SLIDER ===== */
+
+.hero-slider {
+  position: relative;
+  width: 100%; /* ✅ full width */
+  height: 680px;
+  overflow: hidden;
+  background: #000;
+}
+
+/* each slide */
+.hero-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover; /* ✅ تصویر فضا را پر می‌کند */
+  background-repeat: no-repeat;
+  background-position: center center; /* ✅ کراپ از وسط – قشنگ‌تر */
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+/* active slide */
+.hero-slide.active {
+  opacity: 1;
+}
+
+.hero-overlay {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1));
+  display: flex;
+  align-items: center;
+}
+
+.hero-content {
+  max-width: 520px;
+  padding: 40px 40px 60px;
+}
+
+/* slider dots */
+.hero-dots {
+  position: absolute;
+  left: 50%;
+  bottom: 16px;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+}
+
+.hero-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  background: transparent;
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.hero-dot.active {
+  background: #fff;
+  opacity: 1;
+}
+
+/* ===== MAIN LAYOUT / GRID ===== */
+
+.hero-container {
+  padding: 30px 40px 60px;
+}
+
+.section-title {
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+}
+
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 20px;
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 900px) {
+  .navbar {
+    padding: 12px 16px;
+  }
+
+  .search-area {
+    margin: 0 16px;
+  }
+
+  .hero-slider {
+    height: 360px;
+  }
+
+  .hero-content {
+    padding: 24px 16px 40px;
+  }
+}
+
+/* ---- موبایل ---- */
+@media (max-width: 600px) {
+  .navbar {
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 12px 16px;
+  }
+
+  .logo {
+    order: 1;
+  }
+
+  .genre-dropdown {
+    order: 3;
+  }
+
+  .search-area {
+    order: 2;
+    width: 100%;
+    margin: 0;
+  }
+
+  .hero-container {
+    padding: 24px 16px 40px;
+  }
+}

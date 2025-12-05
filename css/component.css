@@ -1,0 +1,232 @@
+/* ===== HERO TYPOGRAPHY & BUTTONS ===== */
+
+.hero-title {
+  font-size: 2.6rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.hero-genres {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 1rem;
+}
+
+.genre-pill {
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.6);
+  font-size: 0.8rem;
+}
+
+.hero-description {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #e5e5e5;
+  max-width: 460px;
+  margin-bottom: 1.2rem;
+}
+
+.hero-extra {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* buttons */
+.btn {
+  border: none;
+  padding: 0.6rem 1.4rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.btn-primary {
+  background-color: #f5c518;
+  color: #000;
+  margin-right: 0.8rem;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+/* ===== SEARCH SUGGESTIONS ===== */
+
+.search-suggestions {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  right: 0;
+  background: #111;
+  border-radius: 8px;
+  max-height: 320px;
+  overflow-y: auto;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+  z-index: 40;
+  display: none;
+}
+
+.search-suggestions.visible {
+  display: block;
+}
+
+.search-suggestion-item {
+  padding: 8px 12px;
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.search-suggestion-item:hover {
+  background: #222;
+}
+
+.search-suggestion-poster {
+  width: 32px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.search-suggestion-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.search-suggestion-title {
+  font-size: 0.9rem;
+}
+
+.search-suggestion-meta {
+  font-size: 0.75rem;
+  color: #aaa;
+}
+
+/* ===== DROPDOWN GENRES ===== */
+
+.genre-item {
+  display: block;
+  width: 100%;
+  padding: 6px 12px;
+  background: transparent;
+  border: none;
+  color: #f5f5f5;
+  font-size: 0.9rem;
+  text-align: left;
+  cursor: pointer;
+}
+
+.genre-item:hover {
+  background: #222;
+}
+
+.dropdown-error {
+  color: #f88;
+  font-size: 0.85rem;
+  padding: 6px 10px;
+}
+
+/* ===== MOVIE CARDS ===== */
+
+.movie-card {
+  background-color: #111;
+  border-radius: 6px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.movie-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+.movie-poster {
+  width: 100%;
+  display: block;
+}
+
+.movie-info {
+  padding: 10px;
+}
+
+.movie-title {
+  font-size: 0.95rem;
+  margin-bottom: 0.3rem;
+}
+
+.movie-meta {
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+.movie-info {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.movie-more-btn {
+  margin-top: 6px;
+  padding: 4px 8px;
+  font-size: 0.8rem;
+  border-radius: 4px;
+  border: 1px solid #444;
+  background: #111;
+  color: #f5f5f5;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+.movie-more-btn:hover {
+  background: #222;
+}
+/* ===== PAGINATION ===== */
+
+.pagination-wrapper {
+  padding-top: 24px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 0 0;
+}
+
+.page-btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: none;
+  background: #202020;
+  color: #fff;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.page-btn:hover {
+  background: #333;
+}
+
+.page-btn.active {
+  background: #f5c518; /* زرد IMDB */
+  color: #000;
+}
+
+.page-btn-ellipsis {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: none;
+  background: transparent;
+  color: #888;
+  cursor: default;
+}

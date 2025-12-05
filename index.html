@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MovieFinder</title>
+
+    <!-- CSS files -->
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/component.css" />
+    <link rel="stylesheet" href="css/pages.css" />
+  </head>
+  <body>
+    <!-- Header: navbar + hero slider -->
+    <header>
+      <!-- Navbar (positioned over the hero slider in CSS) -->
+      <nav class="navbar">
+        <div class="logo">
+          <img src="assets/IMDB logo.svg" alt="IMDb logo" />
+        </div>
+
+        <div class="search-area">
+          <form class="search-form">
+            <input
+              type="search"
+              class="search-input"
+              placeholder="Search movies..."
+            />
+            <button type="submit" class="search-button">
+              <img src="assets/icons/Icons.svg" alt="Search" />
+            </button>
+            <div id="searchSuggestions" class="search-suggestions"></div>
+          </form>
+        </div>
+
+        <div class="genre-dropdown">
+          <button id="genreButton" class="dropdown-btn">
+            Genres
+            <img src="assets/icons/Arrow down.svg" alt="" />
+          </button>
+          <div id="genreList" class="dropdown-content"></div>
+        </div>
+      </nav>
+
+      <!-- Hero slider: full-width background image, filled via JS -->
+      <section class="hero-slider" id="heroSlider">
+        <!-- Slides injected by JS -->
+      </section>
+    </header>
+
+    <main>
+      <section class="hero-container">
+        <h2 class="section-title">Popular Movies</h2>
+
+        <!-- Movies grid: completely filled via JS (loadPopularMovies) -->
+        <div class="movies-grid"></div>
+
+        <!-- Pagination -->
+        <div class="pagination-wrapper">
+          <div class="pagination" id="homePagination"></div>
+        </div>
+      </section>
+    </main>
+
+    <!-- JS -->
+    <script type="module" src="js/home.js"></script>
+  </body>
+</html>

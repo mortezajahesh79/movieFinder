@@ -1,0 +1,195 @@
+.hero {
+  height: 350px;
+  background: linear-gradient(to bottom, transparent, #000);
+}
+
+/* ===== MOVIE DETAIL PAGE ===== */
+
+.movie-detail {
+  padding: 40px;
+  color: #fff;
+}
+
+/* عنوان و متادیتای بالا */
+.movie-detail-header {
+  margin-bottom: 24px;
+}
+
+.movie-detail-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.movie-detail-submeta {
+  display: flex;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: #aaa;
+  align-items: center;
+}
+
+/* badge امتیاز سمت راست */
+.movie-detail-rating-pill {
+  margin-left: auto;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #f5c518;
+  color: #000;
+  font-size: 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.movie-detail-rating-pill span {
+  font-size: 0.78rem;
+  opacity: 0.8;
+}
+
+/* بخش اصلی: پوستر + جدول اطلاعات */
+.movie-detail-main {
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr);
+  gap: 32px;
+  align-items: flex-start;
+}
+
+.movie-detail-poster {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* جدول اطلاعات */
+.movie-detail-info-table {
+  display: grid;
+  row-gap: 12px;
+}
+
+.movie-detail-row {
+  display: grid;
+  grid-template-columns: 80px minmax(0, 1fr);
+  column-gap: 16px;
+  font-size: 0.9rem;
+  align-items: flex-start;
+}
+
+.movie-detail-label {
+  color: #aaaaaa;
+}
+
+.movie-detail-value {
+  color: #e5e5e5;
+}
+
+/* ژانر به صورت pill مثل فیگما */
+.movie-detail-genres {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.movie-detail-genre-pill {
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #1a1a1a;
+  font-size: 0.8rem;
+}
+
+/* گالری عکس‌های افقی */
+.movie-detail-stills {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+}
+
+.movie-detail-still {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.movie-detail-still img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+
+/* بخش CAST */
+.movie-detail-section-title {
+  margin-top: 32px;
+  margin-bottom: 16px;
+  font-size: 1.1rem;
+}
+
+/* می‌تونی افقی اسکرول کنی مثل نتفلیکس */
+.movie-detail-cast-grid {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+
+.cast-card {
+  min-width: 140px;
+  max-width: 140px;
+  background: #111;
+  border-radius: 10px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.cast-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.cast-card-body {
+  padding: 8px;
+}
+
+.cast-card-name {
+  font-size: 0.9rem;
+  margin-bottom: 2px;
+}
+
+.cast-card-role {
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+/* ریسپانسیو */
+@media (max-width: 900px) {
+  .movie-detail {
+    padding: 24px 16px;
+  }
+
+  .movie-detail-main {
+    grid-template-columns: 1fr;
+  }
+
+  .movie-detail-poster {
+    max-width: 260px;
+    justify-self: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px 20px;
+  }
+
+  .search-area {
+    margin: 0 10px;
+  }
+
+  .logo img {
+    height: 26px;
+  }
+
+  .dropdown-btn {
+    font-size: 0.9rem;
+  }
+}
