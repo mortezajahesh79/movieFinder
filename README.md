@@ -47,7 +47,7 @@ project/
 ## 🚀 How to Run Locally
 
 1. Download or clone the project:
-   git clone https://github.com/username/MovieFinder.git
+   git clone https://github.com/mortezajahesh79/movieFinder.git
 
 2. Open the project folder.
 
